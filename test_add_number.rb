@@ -40,4 +40,8 @@ class TestAddNumber < Minitest::Test
   def test_add_with_only_separators
     assert_equal 0, add(',,,\n;\n\n;;')
   end
+
+  def test_change_delimiter
+    assert_equal 3, add('//;\n1;2')
+  end
 end
